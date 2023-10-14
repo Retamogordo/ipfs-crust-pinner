@@ -21,8 +21,8 @@ jobs:
           path: './.github/template'
           seeds: ${{ secrets.CRUST_SEEDS }}
 
-      - name: Echo IPFS CID
-        run: echo $GITHUB_OUTPUT
+      - name: Echo Hash Value
+        run: echo "Hash value is: ${{ steps.pin_on_crust.outputs.hash }}"
   #      run: echo "{foo}={bar}" >> $GITHUB_OUTPUT
       # - name: Pin to Crust
       #   id: pintocrust
