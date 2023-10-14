@@ -22,7 +22,8 @@ jobs:
           seeds: ${{ secrets.CRUST_SEEDS }}
 
       - name: Echo IPFS CID
-        run: echo "{foo}={bar}" >> $GITHUB_OUTPUT
+        run: echo $GITHUB_OUTPUT
+  #      run: echo "{foo}={bar}" >> $GITHUB_OUTPUT
       # - name: Pin to Crust
       #   id: pintocrust
       #   uses: crustio/ipfs-crust-action@v1.0.8
