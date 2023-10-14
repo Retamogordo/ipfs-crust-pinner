@@ -25,9 +25,9 @@ jobs:
         run: echo "Hash value is"
 #        run: echo "Hash value is: ${{ steps.uploadsite.outputs.hash }}"
   #      run: echo "{foo}={bar}" >> $GITHUB_OUTPUT
-      # - name: Pin to Crust
-      #   id: pintocrust
-      #   uses: crustio/ipfs-crust-action@v1.0.8
-      #   with:
-      #     cid: ${{ steps.uploadsite.outputs.hash }}
-      #     seeds: ${{ secrets.CRUST_SEEDS }}
+      - name: Pin to Crust
+        id: pintocrust
+        uses: crustio/ipfs-crust-action@v1.0.8
+        with:
+          cid: ${{ steps.uploadsite.outputs.hash }}
+          seeds: ${{ secrets.CRUST_SEEDS }}
